@@ -1,2 +1,1 @@
-# trybe-exercicios
-Primeiro repositório 'curso trybe'
+# Meu repositório de exercícios
