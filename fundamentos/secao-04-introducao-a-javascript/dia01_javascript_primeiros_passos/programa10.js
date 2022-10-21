@@ -9,8 +9,8 @@
 //O lucro de um produto é o resultado da subtração do valor de venda pelo custo
 //do mesmo, sendo que o imposto de 20% também faz parte do valor de custo.
 
-const cost = 1;
-const sale = 3;
+const cost = 5;
+const sale = 5;
 let sold = 1000;
 let taxes = 0.2;
 
@@ -20,4 +20,13 @@ if (cost >= 0 && sale >=0 ){
     console.log('Seu lucro final s/ imposto é de: R$',profitOtax)
 } else {
     console.log('ERRO não pode ser negativo!')
+}
+
+const profit2 = cost * 1.2;
+const profitOtax2= (sale - profit2)* sold;
+
+if (cost < 0 || sale <0 ){
+    console.log('ERRO não pode ser negativo!')
+} else {
+    console.log('Seu lucro final s/ imposto é de: R$',profitOtax2)
 }
