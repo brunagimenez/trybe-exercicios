@@ -1,4 +1,4 @@
-let salarioBruto = 3000;
+let salarioBruto = 10000;
 let descontoINSS;
 let descontoIR;
 
@@ -24,7 +24,7 @@ if (salarioSINSS <= 1903.98){
     descontoIR = (salarioSINSS * 0.15) - 354.80;
 } else if  (salarioSINSS <= 4664.68){
     descontoIR = (salarioSINSS * 0.225) - 636.13;
-} else {
+} else { 
     descontoIR = (salarioSINSS * 0.275) - 869.36;
 }
 
