@@ -1,11 +1,17 @@
-document.getElementById('header-container').style.backgroundColor = '#00b069';
+const admTempo = document.getElementById('header-container');
+admTempo.style.backgroundColor = '#00b069';
 
-document.getElementsByClassName('emergency-tasks')[0].style.backgroundColor = '#ff9f84';
-document.querySelectorAll('.emergency-tasks h3')[0].style.backgroundColor = '#a500f3';
-document.querySelectorAll('.emergency-tasks h3')[1].style.backgroundColor = '#a500f3';
-document.getElementsByClassName('no-emergency-tasks')[0].style.backgroundColor = '#f9db5e';
-document.querySelectorAll('.no-emergency-tasks h3')[0].style.backgroundColor = '#232525';
-document.querySelectorAll('.no-emergency-tasks h3')[1].style.backgroundColor = '#232525';
+const colorRose = document.getElementsByClassName('emergency-tasks')[0];
+colorRose.style.backgroundColor = '#ff9f84';
 
-document.getElementById('footer-container').style.backgroundColor ='#003533';
+const urgente = document.querySelectorAll('.emergency-tasks h3');
+for (let i of urgente){
+    urgente[i].style.backgroundColor = '#a500f3';
+}
+const colorYellow = document.querySelector('.no-emergency-tasks');
+colorYellow.style.backgroundColor = '#f9db5e';
 
+const naoUrgente = document.querySelectorAll('.no-emergency-tasks h3')
+for (let i of naoUrgente){
+    naoUrgente.style.backgroundColor = '#232525';
+}
