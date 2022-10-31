@@ -12,21 +12,42 @@
       */
 
  const years = () => {
-  let twoYears = document.getElementsByTagName('p')[1];
-  twoYears.innerHTML = "Daqui dois anos me vejo exercendo a profissão de dev em uma empresa com os mesmos princípios que os meus, como: Inovação; Diversidade; Criatividade; Ética e Transparência.";
+  let twoYears = document.getElementsByTagName('p');
+  twoYears[1].innerText = "Daqui dois anos me vejo exercendo a profissão de dev em uma empresa com os mesmos princípios que os meus, como: Inovação; Diversidade; Criatividade; Ética e Transparência.";
 };
 years();
 
   
 const color = () => {
     let colorGreenTrybe = document.getElementsByClassName('main-content');
-    for (let i in colorGreenTrybe){
-      colorGreenTrybe[i].style.backgroundColor = "rgb(76,164,109)"
-  }
+    colorGreenTrybe[0].style.backgroundColor = "rgb(76,164,109)"
 };
   color();
 
 const colorWhite = () => {
-  let colorWhiteTrybe = document.getElementsByClassName ('.main-content')[0];
-  colorWhiteTrybe[i].style.backgroundColor = "white";
+  let colorWhiteTrybe = document.getElementsByClassName ("center-content");
+  colorWhiteTrybe[0].style.backgroundColor = "white";
+};
+
+colorWhite ();
+
+const tagH1 = () => {
+  let tag = document.getElementsByTagName('h1');
+  tag[0].innerText = 'Exercício - JavaScript';
+};
+tagH1();
+
+const alterText = () => {
+  const paragrafoP= document.getElementsByTagName('p')[0];
+  paragrafoP.style.textTransform = 'uppercase'
+  // paragrafoP.innerText = paragrafoP.innerText.toUpperCase();
+}
+alterText();
+
+const executeConsole = () => {
+  const todosP = document.getElementsByTagName ('p');
+  for ( let i in todosP){
+    const elemen = todosP[i];
+    console.log(elemen)
+  }
 }
