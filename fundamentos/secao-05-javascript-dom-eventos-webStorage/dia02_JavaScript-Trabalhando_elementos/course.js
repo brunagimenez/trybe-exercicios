@@ -17,3 +17,20 @@ const terceiroFilho = elementoOndeVoceEsta.nextElementSibling;
 // Agora acesse o terceiroFilho a partir de pai.
 const terceiroFilhoPai = elementoPai.lastElementChild.previousElementSibling;
 
+
+// Crie um irmão para elementoOndeVoceEsta.
+const pai = document.getElementById('pai');
+const irmaoElementoOndeVoceEsta = document.createElement('section');
+irmaoElementoOndeVoceEsta.id = 'irmaoElementoOndeVoceEsta';
+pai.appendChild(irmaoElementoOndeVoceEsta);
+// Crie um filho para elementoOndeVoceEsta.
+const filhoElementoOndeVoceEsta = document.createElement('section');
+filhoElementoOndeVoceEsta.id = 'filhoElementoOndeVoceEsta';
+elementoOndeVoceEsta.appendChild(filhoElementoOndeVoceEsta);
+// Crie um filho para primeiroFilhoDoFilho.
+const filhoPrimeiroFilhoDoFilho = document.createElement('section');
+filhoPrimeiroFilhoDoFilho.id ='filhoPrimeiroFilhoDoFilho';
+filhoDoFilho.appendChild(filhoPrimeiroFilhoDoFilho);
+// A partir desse filho criado, acesse terceiroFilho.
+const terceiroFilhopeloFilho = filhoPrimeiroFilhoDoFilho.parentElement.parentElement.nextElementSibling;
+
