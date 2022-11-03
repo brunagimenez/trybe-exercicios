@@ -42,18 +42,26 @@ input.addEventListener('input',(renomear) => {
     techElement.innerText = renomear.target.value;
 });
 
-  
-  myWebpage.addEventListener('dblclick', () => {
-    window.location.replace('https://blog.betrybe.com/');
-  });
-  
-
 // - Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 //  - Que tal redirecionar para seu portfólio?
 
+  myWebpage.addEventListener('dblclick', () => {
+    // window.location.replace('https://blog.betrybe.com/');
+    window.open('https://brunagimenez.github.io/');
+  });
+
 // - Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
+
+  myWebpage.addEventListener('mouseover', (event) =>{
+    if ( event.target.style.backgroundColor === 'black'){
+        event.target.style.backgroundColor = 'unset'
+    } else {
+        event.target.style.backgroundColor = 'black'
+    }
+  } );
+
 
 // Segue abaixo um exemplo do uso de event.target:
 
