@@ -5,14 +5,48 @@ const input = document.getElementById('input');
 const myWebpage = document.getElementById('my-spotrybefy');
 
 
-// - Copie esse arquivo e edite apenas ele;
-//  - Note que uma das caixas está um pouco acima das outras. Por que isso ocorre?
+
 
 // - Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 //  - Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 
+const addLiTech = (event) => {
+    const addTech = document.querySelector('.tech');
+    addTech.classList.remove('tech');
+    event.target.classList.add('tech');
+    input.value = '';
+}
+
+// const addLiTech = (event) => {
+//     const addTech = event.target;
+//     const addLiTech = document.getElementsByClassName('tech').length;
+    
+//     if (addTech.className.includes('tech')){
+//         addTech.classList.remove('tech');
+//     } else {
+//         addTech.classList.add('tech');
+//     }
+     
+// }
+
+firstLi.addEventListener('click',addLiTech);
+secondLi.addEventListener('click',addLiTech);
+thirdLi.addEventListener('click',addLiTech);
+
 // - Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
+
+
+input.addEventListener('input',(renomear) => {
+    const techElement = document.querySelector('.tech');
+    techElement.innerText = renomear.target.value;
+});
+
+  
+  myWebpage.addEventListener('dblclick', () => {
+    window.location.replace('https://blog.betrybe.com/');
+  });
+  
 
 // - Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
