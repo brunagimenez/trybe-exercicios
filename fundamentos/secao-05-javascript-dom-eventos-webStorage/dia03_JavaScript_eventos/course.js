@@ -5,63 +5,52 @@ const input = document.getElementById('input');
 const myWebpage = document.getElementById('my-spotrybefy');
 
 
-
+//  - Note que uma das caixas está um pouco acima das outras. Por que isso ocorre?  
+//Ela está com uma classe tech e as outras não
 
 // - Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 //  - Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 
-const addLiTech = (event) => {
-    const addTech = document.querySelector('.tech');
-    addTech.classList.remove('tech');
-    event.target.classList.add('tech');
-    input.value = '';
+
+const addClass = (event) => {
+const techClass = document.querySelector('.tech');
+techClass.classList.remove('tech');
+event.target.classList.add('tech');
+input.value='';
 }
 
-// const addLiTech = (event) => {
-//     const addTech = event.target;
-//     const addLiTech = document.getElementsByClassName('tech').length;
-    
-//     if (addTech.className.includes('tech')){
-//         addTech.classList.remove('tech');
-//     } else {
-//         addTech.classList.add('tech');
-//     }
-     
-// }
-
-firstLi.addEventListener('click',addLiTech);
-secondLi.addEventListener('click',addLiTech);
-thirdLi.addEventListener('click',addLiTech);
+firstLi.addEventListener('click',addClass);
+secondLi.addEventListener('click',addClass);
+thirdLi.addEventListener('click',addClass);
 
 // - Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
 
+input.addEventListener
 
-input.addEventListener('input',(renomear) => {
-    const techElement = document.querySelector('.tech');
-    techElement.innerText = renomear.target.value;
-});
+const textBox = (event) => {
+  const techClass = document.querySelector('.tech');
+  techClass.innerText = event.target.value
+};
+
+input.addEventListener('input',textBox);
+
+
 
 // - Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 //  - Que tal redirecionar para seu portfólio?
 
-  myWebpage.addEventListener('dblclick', () => {
-    // window.location.replace('https://blog.betrybe.com/');
-    window.open('https://brunagimenez.github.io/');
-  });
+myWebpage.addEventListener('dblclick', () => {
+  window.open('https://github.com/brunagimenez');
+});
 
 // - Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
 
-  myWebpage.addEventListener('mouseover', (event) =>{
-    if ( event.target.style.backgroundColor === 'black'){
-        event.target.style.backgroundColor = 'unset'
-    } else {
-        event.target.style.backgroundColor = 'black'
-    }
-  } );
-
+myWebpage.addEventListener('mouseover', (event) => {
+  event.target.style.backgroundColor = 'pink';
+});
 
 // Segue abaixo um exemplo do uso de event.target:
 
