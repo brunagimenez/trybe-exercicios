@@ -49,7 +49,12 @@ myWebpage.addEventListener('dblclick', () => {
 // a cor do mesmo;
 
 myWebpage.addEventListener('mouseover', (event) => {
-  event.target.style.backgroundColor = 'pink';
+  if (myWebpage.style.backgroundColor !== 'pink'){
+    event.target.style.backgroundColor = 'pink';
+  } else {
+    event.target.style.backgroundColor = 'unset'
+  }
+  
 });
 
 // Segue abaixo um exemplo do uso de event.target:
