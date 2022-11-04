@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p id="paragraph">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p id="second-paragraph">Segundo parágrafo!</p>
+    </header>
+    <script>
+      const paragraph = document.getElementById("paragraph");
+      paragraph.innerText = "Frases que marcaram todo mundo em Stranger Things";
+      paragraph.style.backgroundColor='#070d59';
+      paragraph.style.margin = '20px';
+      paragraph.style.padding ='10px'
+      paragraph.style.color ='white';
+      paragraph.style.textAlign = 'center';
+      paragraph.style.fontSize = '15px'
+
+
+      const titulo = document.getElementById('page-title');
+      titulo.innerText = 'Stranger Things'
+      titulo.style.fontSize = '50px';
+      titulo.style.color ='#c10537';
+      titulo.style.textAlign = 'center';
+
+      const subtitulo = document.getElementById('subtitle');
+      subtitulo.innerText = 'A revelação mais surpreendente dos últimos tempos é um hino à amizade, inocência, esperança e o encontro com o desconhecido.Relembre as melhores frases da primeira temporada e conheça as mais recentes do segundo capítulo de Stranger Things!'
+      subtitulo.style.textAlign = 'center';
+
+      const p = document.getElementById('second-paragraph');
+      p.innerText = '"Nós nunca teríamos te irritado se soubéssemos que você tinha superpoderes."'
+      p.style.textAlign = 'center';
+    </script>
+  </body>
+</html>
