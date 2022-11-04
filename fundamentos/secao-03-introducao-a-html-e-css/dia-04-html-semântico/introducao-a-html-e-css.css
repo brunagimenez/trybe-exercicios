@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    background-color: #ce938b;
+    color: white;
+    height: 80px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    padding-top: 20px;
+}
+nav{
+    background-color: #e3e1b1;
+}
+nav li{
+    display: inline-block;
+    margin-left: 250px;
+    padding:20px 20px;
+    color: #3b5274;
+}
