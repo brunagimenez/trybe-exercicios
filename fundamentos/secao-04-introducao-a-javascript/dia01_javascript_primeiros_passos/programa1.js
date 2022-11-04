@@ -18,4 +18,3 @@ let multiplicacao = a * b
 let divisao = a / b
     console.log(divisao)
 let modulo = a % b
-    console.log(modulo)

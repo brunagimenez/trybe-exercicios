@@ -9,11 +9,14 @@ const anguloIntB = 40;
 const anguloIntC = 30;
 
 let soma = anguloIntA + anguloIntB + anguloIntC;
+let invalido = anguloIntA > 0 && anguloIntB > 0 && anguloIntC > 0;
 
-if (soma === 180){
-    console.log(true)
-} else if ( soma >= 0){
-    console.log(false)
+if (invalido){
+    if (soma === 180){
+        console.log(true);
+    } else {
+        console.log(false);
+    }
 } else {
-    console.log('erro')
+    console.log('erro');
 }
