@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Header da página</h1>
+        <h1>Formulário para cadastro de currículo</h1>
     </header>
     <form>
 
@@ -36,7 +36,7 @@
         </section>
         
         <h3>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</h3>
-        <textarea name="texto" rows="10" cols="70" maxlength="500"></textarea>
+        <textarea name="texto" id="textarea" rows="10" cols="50" maxlength="500"></textarea>
 
         <section>
             <h3>Qual a melhor data para realizar sua viagem?</h3>
@@ -48,10 +48,12 @@
             <input type="checkbox" name="receber oportunidades" id="newslatter">
             <label for="newslatter">Quero receber outras incríveis oportunidades oferecidas pela Trybe.</label>
             </br>
-            <input type="checkbox" name="concorda com termos" id="termos">
+            <input type="checkbox" name="concorda com termos" id="termos" required>
             <label for="termos">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
         </section>
-
+        <button type="submit" disabled id="button-submit">Entrar</button>
+        <button type="reset" id="clear">Apagar</button>
     </form>
+    <script src="form.js"></script>
 </body>
 </html>
