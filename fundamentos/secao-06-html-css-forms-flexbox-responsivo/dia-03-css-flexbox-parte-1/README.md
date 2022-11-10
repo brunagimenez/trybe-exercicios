@@ -1,23 +1,5 @@
 Esse é um projeto para o conteúdo de `CSS Flexbox`.
 
-### Antes de iniciar
-
-Clone o repositório criado para o seu computador.
-
-Vá para a branch master do seu projeto e execute o comando:
-
-```bash
-git branch
-```
-
-Mude para a branch tech-gallery com o comando `git checkout tech-gallery`. É nessa branch que você realizará a solução para o exercício.
-
-Observe o que deve ser feito nas instruções.
-
-**Atenção!** Como esse repositório é somente-leitura, você não vai conseguir fazer push nele.
-
-Após a solução dos exercícios, não precisa fazer o push ou criar um pull request, já que não há um avaliador para esse exercício.
-
 ### COMEÇANDO OS EXERCÍCIOS
 
 ![Trybe Gallery Preview](images/trybe-tech-gallery.jpeg)
