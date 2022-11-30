@@ -60,5 +60,19 @@ const books = [
       releaseYear: 1928,
     },
   ];
-  
-  // Adicione o código do exercício aqui:
+  const expectedResult = () => books.map((livros) => `${livros.name} - ${livros.genre} - ${livros.author.name}`);
+
+  const formatedAuthorNamesBirth = () => books.map((livros) => `${livros.author.name} - ${livros.author.birthYear}`);
+
+  const nameAndAge = () => {
+    return books
+    .map((livros) => (
+        {
+            author: livros.author.name,
+            age: livros.releaseYear - livros.author.birthYear,
+        }
+    )
+    .sort((a,b) => a.age - b.age)
+  )
+};
+  console.log(nameAndAge());
