@@ -5,8 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validador de Campos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
+    <form>
+        <h1> Validador de Campos </h1>
+        <input type="text" class="form-control width-form" id="input-validator" placeholder="Insira aqui o valor">
+        <select name="typeofvalidation" class="form-select width-form" id="typeofvalidation">
+            <option id="cpf" value="cpf">CPF</option>
+            <option id="email" value="email">E-MAIL</option>
+            <option id="data" value="data">DATA</option>
+            <option id="telefone" value="telefone">TELEFONE CELULAR</option>
+            <option id="colorrgb" value="colorrgb">LETRAS MAIÚSCULAS</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Validar</button>
+    </form>
+    <p>Digite o valor, escolha a opção e clique em validar</p>
     <script type="module" src="src/main.js"></script>
 </body>
 </html>
