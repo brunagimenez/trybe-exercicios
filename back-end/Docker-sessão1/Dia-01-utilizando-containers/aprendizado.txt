@@ -1,0 +1,3 @@
+Docker é basicamente uma forma de criar um ambiente isolado para executar um software em um sistema operacional diferente. Isso é útil para testar programas em diferentes plataformas, por exemplo.
+ Ele utiliza containers para virtualizar apenas os componentes necessários para a execução do software, tornando o processo muito mais eficiente.
+Em resumo, o Docker é uma ferramenta poderosa para o desenvolvimento de software. Ele permite criar ambientes de desenvolvimento consistentes e portáteis, simplificar a implantação de aplicativos e reduzir a possibilidade de erros. 
