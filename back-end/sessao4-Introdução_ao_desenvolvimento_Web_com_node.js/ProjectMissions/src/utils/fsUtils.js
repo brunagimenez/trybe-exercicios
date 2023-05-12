@@ -11,7 +11,7 @@ const readMissionsData = async() => {
       const data = await fs.readFile(path.resolve(__dirname, MISSION_DATA_PATH));
       const missions = JSON.parse(data);
       //JSON.parse para traduzir o Buffer retornado do path
-      return missions;
+    return missions;
   } catch(error) {
     console.error(`Erro na leitura do arquivo: ${error}`);
   }
@@ -21,8 +21,8 @@ const readMissionsData = async() => {
 const writeNewMissinData = async(newMission) => {
     try {
         const oldMissions = await readMissionsData();
-        const allMissions = JSON.stringify([...oldMissions, newMission])
-
+        const allMissions = JSON.stringify([...oldMissions, { id: (oldMissions.length + 1), ...newMission}])
+        // const allMissions = JSON.stringify([...oldMissions, { id: Date.now(), ...newMission}])
         await fs.writeFile(path.resolve(__dirname, MISSION_DATA_PATH), allMissions)
     } catch (error) {
       console.error(`Erro na leitura do arquivo: ${error}`);
