@@ -1,5 +1,10 @@
 const express = require('express');
-const { readMissionsData, writeNewMissinData, updateMissionData, deleteMissionData } = require('./utils/fsUtils');
+const { 
+    readMissionsData, 
+    writeNewMissinData,
+    updateMissionData,
+    deleteMissionData,
+} = require('./utils/fsUtils');
 
 const app = express();
 
@@ -18,7 +23,7 @@ app.post('/missions', async (req, res) => {
 
  const newMissionWithId = await writeNewMissinData(newMissions);
 
- return res.status(201).json({ newMissionWithId });
+ return res.status(201).json({ missions: newMissionWithId });
 });
 
 // endpoint que adiciona novos dados de missões
@@ -29,7 +34,7 @@ app.put('/missions/:id', async (req, res) => {
 
     const updatedMission = await updateMissionData(Number(id), updatedMissionData);
    
-    return res.status(201).json({ updatedMission });
+    return res.status(201).json({ missions: updatedMission });
    });
 
    // endpoint que atualiza dados de missões
@@ -39,7 +44,7 @@ app.put('/missions/:id', async (req, res) => {
    
     const newMissionWithId = await writeNewMissinData(newMissions);
    
-    return res.status(201).json({ newMissionWithId });
+    return res.status(201).json({ missions: newMissionWithId });
    });
    
    // endpoint que adiciona novos dados de missões
