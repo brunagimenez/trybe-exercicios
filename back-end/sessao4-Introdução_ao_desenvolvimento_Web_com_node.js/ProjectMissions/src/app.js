@@ -26,36 +26,47 @@ app.post('/missions', async (req, res) => {
  return res.status(201).json({ missions: newMissionWithId });
 });
 
+// endpoint que atualiza dados de missões
+
+app.post('/missions', async (req, res) => {
+    const newMissions = req.body;
+   
+    const newMissionWithId = await writeNewMissinData(newMissions);
+   
+    return res.status(201).json({ missions: newMissionWithId });
+});
+
+const validateMissionId = (req, res, next) => {
+    const { id } = req.params;
+
+    const idAsNumber = Number(id);
+    if (Number.isNaN(idAsNumber)) {
+        res.status(400).send({ message: 'ID inválido! Precisa ser um número' });
+    } else {
+        next();
+    }
+};
+
 // endpoint que adiciona novos dados de missões
 
-app.put('/missions/:id', async (req, res) => {
+app.put('/missions/:id', validateMissionId, async (req, res) => {
     const { id } = req.params;
     const updatedMissionData = req.body;
 
     const updatedMission = await updateMissionData(Number(id), updatedMissionData);
    
     return res.status(201).json({ missions: updatedMission });
-   });
+});
+ 
+// endpoint que adiciona novos dados de missões
+   
+app.delete('/missions/:id', validateMissionId, async (req, res) => {
+    const { id } = req.params;
+    await deleteMissionData(Number(id));
 
-   // endpoint que atualiza dados de missões
-
-   app.post('/missions', async (req, res) => {
-    const newMissions = req.body;
+    return res.status(204).end();
+});
    
-    const newMissionWithId = await writeNewMissinData(newMissions);
-   
-    return res.status(201).json({ missions: newMissionWithId });
-   });
-   
-   // endpoint que adiciona novos dados de missões
-   
-   app.delete('/missions/:id', async (req, res) => {
-       const { id } = req.params;
-       await deleteMissionData(Number(id));
-      
-       return res.status(204).end();
-      });
-   
-      // endpoint que deleta dados de missão pelo id
+// endpoint que deleta dados de missão pelo id
 
 module.exports = app;
